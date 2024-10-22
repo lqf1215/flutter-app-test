@@ -10,15 +10,15 @@ import 'package:get/get_navigation/src/routes/get_route.dart';
 
 class AppPages {
 
-  String checkLoginStatus() {
-    // if (KVService()
-    //     .getStringPrefValue(key: KvConstants.walletPassword)
-    //     .isEmpty) {
-      return RouteConstants.initialRoute;
-    // } else {
-    //   return RouteConstants.loginRoute;
-    // }
-  }
+  // String checkLoginStatus() {
+  //   // if (KVService()
+  //   //     .getStringPrefValue(key: KvConstants.walletPassword)
+  //   //     .isEmpty) {
+  //     return RouteConstants.initialRoute;
+  //   // } else {
+  //   //   return RouteConstants.loginRoute;
+  //   // }
+  // }
 
   static List<GetPage> pages = [
     GetPage(name: RouteConstants.initialRoute,

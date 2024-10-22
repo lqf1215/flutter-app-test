@@ -1,6 +1,7 @@
-import 'package:app_test/widgets/button/custom_outline_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import 'button/custom_outline_button.dart';
 
 class ShowError extends StatelessWidget {
   final String? errorMessage;

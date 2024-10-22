@@ -1,18 +1,21 @@
-import 'package:app_test/models/posts.dart';
+import 'package:app_test/controllers/posts_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class PostsDetail extends StatelessWidget {
-  final PostsModel posts;
-
-  const PostsDetail({super.key, required this.posts});
+  const PostsDetail({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(padding:   const EdgeInsets.symmetric(horizontal: 20, vertical: 10),child: Column(children: [
-    Text("Id:${posts.id}"),
-    Text("Title:${posts.title}"),
-    Text("Body:${posts.body}"),
-    ]));
+    return GetBuilder<PostsController>(builder: (postController) {
+      return Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          child: Column(children: [
+            Text("Id:${postController.postDetailData.id}"),
+            Text("Title:${postController.postDetailData.title}"),
+            Text("Body:${postController.postDetailData.body}"),
+          ]));
+    });
   }
 }

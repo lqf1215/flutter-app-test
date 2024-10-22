@@ -1,11 +1,11 @@
-
 import 'package:app_test/models/posts.dart';
-import 'package:app_test/services/posts.dart';
+import 'package:app_test/services/posts_service.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 
-class PostsController extends GetxController{
+class PostsController extends GetxController {
   List<PostsModel> postsList = [];
+  PostsModel postDetailData = PostsModel();
   bool isPostsList = false;
   final ScrollController scrollController = ScrollController();
   int page = 1;
@@ -23,9 +23,11 @@ class PostsController extends GetxController{
     }
     return false;
   }
+
   getNextPage() {
     return page;
   }
+
   resetPageNumber() {
     page = 1;
     update();
@@ -33,6 +35,11 @@ class PostsController extends GetxController{
 
   setPostsList(List<PostsModel> data) {
     postsList = data;
+    update();
+  }
+
+  setDetailPost(PostsModel data) {
+    postDetailData = data;
     update();
   }
 }

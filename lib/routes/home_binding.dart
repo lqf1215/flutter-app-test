@@ -1,7 +1,7 @@
 
 import 'package:app_test/controllers/color.dart';
 import 'package:app_test/controllers/local_data.dart';
-import 'package:app_test/controllers/posts.dart';
+import 'package:app_test/controllers/posts_controller.dart';
 import 'package:get/get.dart';
 
 class HomeBinding implements Bindings{
